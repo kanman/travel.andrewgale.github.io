@@ -1,0 +1,237 @@
+
+body {
+padding: 0;
+margin: 0;	
+}
+
+.container {
+position: fixed;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+background: url('file:///Users/andrewg/Desktop/gulptest/public/HTML/Heron-Island/Images/Green-Turtle-Water.jpg') center center fixed;
+background-repeat: no-repeat;
+-webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(20%);
+ }
+
+
+
+header {
+display: block;
+position: relative;
+width: 100%;
+height: 35%;
+    z-index: 3;
+    margin: 0% 0% 2% 0%;
+    background:rgba(0, 0, 0, 0.1); 
+ 
+
+}
+
+.mainbody {
+width: 75%;
+height: 40%;
+display: block;
+position: fixed;
+margin: 20% 12.5% 0 12.5%;
+outline: 2px dotted #fff;
+}
+
+ul {
+display: inline-block;
+position: relative;
+height: 85%;
+width: 20%;
+outline: 2px dotted #fff;
+opacity: 0.9;
+border-radius: 50%;
+background: #b58d5a;
+margin-right: 2%;
+float: left;
+z-index: 2;
+
+}
+
+
+
+
+ul li {
+color: #fff;
+font-size: 1.6em;
+position: relative;
+margin: 34% 16% 15% 0%;
+width: 87%;
+list-style-type: none;
+text-align: center;
+font-family: 'HelveticaNeue';
+text-transform: uppercase;
+font-weight: bold;
+z-index: 4;
+
+}	
+
+
+
+h1 {
+color: #fff;
+font-family: 'Great Vibes', cursive;
+font-size: 4em;
+font-weight: 600;
+opacity: 1;
+position: absolute;
+width: 100%;
+z-index: 4;
+line-height: 120%;
+text-align: center;
+padding-bottom: 15px;
+}
+
+
+h2 {
+color: #fff;
+font-family: helvetica, sans-serif;
+font-size: 1.8em;
+position: absolute;
+width: 70%;
+margin: 6em 15% 0 15%;
+text-align: center;
+opacity: 0;
+animation-name: subheading;
+animation-duration: 8s;
+animation-delay: 2s;
+animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes subheading {
+	0% {opacity: 0;}
+	25% {opacity: 1;}
+	50% {opacity: 1;}
+	75% {opacity: 1;}
+	100% {opacity: 1;}
+}
+
+
+
+#videocontainer {
+display: block;
+animation-name: video;
+animation-duration: 3s;
+opacity: 0;
+animation-fill-mode: forwards;
+animation-delay: 18s;
+position: fixed;
+width: 70%;
+height: auto;
+margin-left: 15%;
+margin-right: 15%;
+margin-top: 9em;
+}
+
+
+
+
+
+@keyframes title {
+	from {opacity: 0;}
+	to {opacity: 1;}
+
+	from {transform: scale(0.70);}
+	to {transform: scale(1);}
+}
+
+
+
+
+img {
+	max-width: 
+	100%
+}
+
+
+/* Large devices (LD) (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.99px)  { 
+
+h1 {
+	font-size: 3.9em;
+}
+
+} 
+
+
+
+/* Medium devices (MD) (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.99px)  {
+
+
+header {
+}
+
+h1 { 
+	font-size: 3.8em;
+		margin-top: 5%;
+}
+
+
+h2 {
+margin: 5em 7.5% 0 7.5%;
+font-size: 2.5em;
+width: 85%;
+text-align: center;
+ }
+}
+
+
+/* Small devices (SM) (Maximum width 768px) */
+
+@media (max-width: 768px) {
+
+header {
+}
+
+h1 { 
+	font-size: 2.8em;
+		margin-top: 5%;
+}
+
+
+h2 {
+width: 90%;
+margin: 4.5em 5% 0 5%;
+font-size: 1.9em;
+ }
+
+
+}
+
+
+/* Small devices (SM) (Landscape View) */
+
+@media (max-width: 768px) and (orientation : landscape) {
+
+header {	
+}
+
+h1 { 
+	font-size: 2.8em;
+	margin-top: 5%;
+}
+
+
+h2 {
+width: 90%;
+margin: 3.5em 5% 0 5%;
+font-size: 1.9em;
+ }
+
+
+}
+
+
+
+
+
