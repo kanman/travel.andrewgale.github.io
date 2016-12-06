@@ -1,34 +1,157 @@
 
+/* Globals */
+
+a {
+color: #fff;	
+}
+
+a:visited {
+color: #fff;	
+}
+
+p {
+
+color: #fff;
+font-family: "source-sans-pro",sans-serif;
+font-size: 1.2em;
+text-align: center;
+}
+
+
+
+/* Body and Main Container */
+
 body {
 padding: 0;
 margin: 0;	
 }
 
-.container {
+
+
+#container {
 position: fixed;
 width: 100%;
 height: 100%;
 margin: 0;
 padding: 0;
-background: url('file:///Users/andrewg/Desktop/gulptest/public/HTML/Heron-Island/Images/Green-Turtle-Water.jpg') center center fixed;
+background: url('https://github.com/kanman/travel.andrewgale.github.io/blob/master/Images/Green-Turtle-Water.jpg') center center fixed;
 background-repeat: no-repeat;
--webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(20%);
- }
+}
 
+
+/* Wrappers/Covers */
+
+
+#cover {
+position: fixed;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+background:rgba(0, 0, 0, 0.1);
+z-index: 2; 	
+}
+
+#modalcover {
+position: fixed;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+z-index: 3;
+background:rgba(0, 0, 0, 0.8); 
+display: none;	
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: Selima Script;
+    src: url('');
+}
 
 
 header {
 display: block;
-position: relative;
+position: absolute;
 width: 100%;
-height: 35%;
+height: 38%;
     z-index: 3;
     margin: 0% 0% 2% 0%;
-    background:rgba(0, 0, 0, 0.1); 
+    background:rgba(0, 0, 0, 0.2); 
+}
+
+/* Horizontal navigation bar */
+
+nav {
+position: absolute;
+left: 1%;
+top: 12%;
+z-index: 5;
+display: block;
+width: auto;
+height: 2em;
+}
+
+ul {
+
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background: transparent;
+z-index: 6;
  
+/* Sticky at Top - Content scrolls underneath
+
+position: fixed;
+top: 0;
+width: 100%;
+*/
+
 
 }
+
+
+li {
+display: inline-block;
+font-family: helvetica;	
+border-right: 1px solid #fff;
+}
+
+li:last-child {
+border-right: none;	
+}
+
+
+li a {
+
+display: block;
+color: #fff;
+text-align: center;
+padding: 8px 14px;
+text-decoration: none;
+}
+
+
+li a:hover {
+}	
+
+li a:hover:not(.active) {
+background-color: #;
+}
+
+.active {
+background-color: #4caf50;
+}
+
+
+/* End nav bar */
+
+
+
+/* Body Content */
 
 .mainbody {
 width: 75%;
@@ -39,72 +162,40 @@ margin: 20% 12.5% 0 12.5%;
 outline: 2px dotted #fff;
 }
 
-ul {
-display: inline-block;
-position: relative;
-height: 85%;
-width: 20%;
-outline: 2px dotted #fff;
-opacity: 0.9;
-border-radius: 50%;
-background: #b58d5a;
-margin-right: 2%;
-float: left;
-z-index: 2;
-
-}
-
-
-
-
-ul li {
-color: #fff;
-font-size: 1.6em;
-position: relative;
-margin: 34% 16% 15% 0%;
-width: 87%;
-list-style-type: none;
-text-align: center;
-font-family: 'HelveticaNeue';
-text-transform: uppercase;
-font-weight: bold;
-z-index: 4;
-
-}	
 
 
 
 h1 {
 color: #fff;
-font-family: 'Great Vibes', cursive;
-font-size: 4em;
-font-weight: 600;
+ font-family: "source-sans-pro",sans-serif;
+font-size: 3.5em;
+font-weight: 400;
 opacity: 1;
 position: absolute;
 width: 100%;
 z-index: 4;
 line-height: 120%;
 text-align: center;
-padding-bottom: 15px;
+margin: 4% 0 0% 0;
+
 }
 
 
 h2 {
 color: #fff;
-font-family: helvetica, sans-serif;
+font-family: "source-sans-pro",sans-serif;
 font-size: 1.8em;
 position: absolute;
+font-weight: 400;
 width: 70%;
-margin: 6em 15% 0 15%;
+margin: 10% 15% 0 15%;
 text-align: center;
 opacity: 0;
 animation-name: subheading;
-animation-duration: 8s;
+animation-duration: 7s;
 animation-delay: 2s;
 animation-fill-mode: forwards;
 }
-
-
 
 
 @keyframes subheading {
@@ -112,26 +203,82 @@ animation-fill-mode: forwards;
 	25% {opacity: 1;}
 	50% {opacity: 1;}
 	75% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+h3 {
+color: #fff;
+font-family: "source-sans-pro",sans-serif;
+font-weight: 400;
+font-size: 1.6em;
+position: absolute;
+width: 70%;
+margin: 10% 15% 0 15%;
+text-align: center;
+opacity: 0;
+animation-name: subheading;
+animation-duration: 8s;
+animation-delay: 8s;
+animation-fill-mode: forwards;
+
+}
+
+h4 {
+color: #fff;
+font-family: "source-sans-pro",sans-serif;
+font-weight: 400;
+font-size: 1.6em;
+position: absolute;
+width: 70%;
+margin: 10% 15% 0 15%;
+text-align: center;
+opacity: 0;
+animation-name: subheading;
+animation-duration: 12s;
+animation-delay: 18s;
+animation-fill-mode: forwards;
+}
+
+h5 {
+color: #fff;
+font-family: "source-sans-pro",sans-serif;
+font-weight: 400;
+font-size: 1.6em;
+position: absolute;
+width: 70%;
+margin: 10% 15% 0 15%;
+text-align: center;
+opacity: 0;
+animation-name: subheading;
+animation-duration: 8s;
+animation-delay: 31s;
+animation-fill-mode: forwards;
+}
+
+
+h6 {
+color: #fff;
+font-family: "source-sans-pro",sans-serif;
+font-weight: 400;
+font-size: 1.6em;
+position: absolute;
+width: 70%;
+margin: 10% 15% 0 15%;
+text-align: center;
+opacity: 0;
+animation-name: finalheading;
+animation-duration: 8s;
+animation-delay: 39s;
+animation-fill-mode: forwards;
+}
+
+@keyframes finalheading {
+	0% {opacity: 0;}
+	25% {opacity: 1;}
+	50% {opacity: 1;}
+	75% {opacity: 1;}
 	100% {opacity: 1;}
 }
-
-
-
-#videocontainer {
-display: block;
-animation-name: video;
-animation-duration: 3s;
-opacity: 0;
-animation-fill-mode: forwards;
-animation-delay: 18s;
-position: fixed;
-width: 70%;
-height: auto;
-margin-left: 15%;
-margin-right: 15%;
-margin-top: 9em;
-}
-
 
 
 
@@ -146,11 +293,126 @@ margin-top: 9em;
 
 
 
-
 img {
 	max-width: 
 	100%
 }
+
+
+
+/* Map */
+
+#map {
+position: absolute;
+top: 8%;
+margin: 0 15% 0 15%;
+z-index: 4;
+display: none;
+width: 70%;
+}
+
+#closemap {
+z-index: 5;
+position: relative;
+margin-bottom: 2%;
+}
+
+#closemap ul {
+width: auto;
+height: auto;	
+}
+
+#closemap li {
+color: #fff;
+font-size: 1.1em;	
+}
+
+
+/* Turtles */
+
+#mainbody {
+position: absolute;
+width: 70%;
+margin: 6% 15% 0 15%;
+text-align: center;	
+}
+
+#turtles h1 {
+color: #fff;
+font-family: "source-sans-pro",sans-serif;
+font-size: 3.4em;
+font-weight: 400;
+opacity: 1;
+position: absolute;
+width: 100%;
+z-index: 4;
+line-height: 120%;
+text-align: center;
+margin: 0% 0 0 0;
+}
+
+#turtles li {
+margin-right: 2%;}
+
+#turtles {
+width: 100%;
+height: 100%;
+z-index: 4;
+display: none;
+background: url('https://github.com/kanman/travel.andrewgale.github.io/blob/master/Images/turtle-beach-web.jpg') center center fixed;
+position: fixed;
+}
+
+#closeturtle {
+z-index: 5;
+position: relative;
+font-size: 1.1em;
+margin: 2% 0 0 2%;
+}
+
+#turtlecover {
+position: fixed;
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+background:rgba(0, 0, 0, 0.4);
+z-index: 2; 	
+}
+
+
+
+
+/* Video */
+
+#video {
+position: absolute;
+top: 10%;
+margin: 0 15% 0 15%;
+z-index: 4;
+display: none;
+width: 70%;
+}
+
+#closevideo {
+z-index: 5;
+position: relative;
+margin-bottom: 2%;
+}
+
+#closevideo ul {
+width: auto;
+height: auto;	
+}
+
+#closevideo li {
+color: #fff;
+font-size: 1.1em;	
+}
+
+
+
+/* Responsive */
 
 
 /* Large devices (LD) (desktops, 992px and up) */
@@ -178,7 +440,7 @@ h1 {
 
 
 h2 {
-margin: 5em 7.5% 0 7.5%;
+margin: 3em 7.5% 0 7.5%;
 font-size: 2.5em;
 width: 85%;
 text-align: center;
